@@ -10,8 +10,8 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
-// Homepage
-app.MapGet("/", () => Results.Ok("App Time Zone API is running 🚀"));
+// Homepage route
+app.MapGet("/", () => "App Time Zone API is running 🚀");
 
 // GET UTC
 app.MapGet("Time/utc", () => Results.Ok(DateTime.UtcNow));
